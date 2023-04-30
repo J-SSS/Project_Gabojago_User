@@ -321,7 +321,7 @@
         }
 
         // 깃발 꽂기.. 그냥 해봄
-        window.addEventListener("load",()=>{
+
             const box = document.querySelector(".flagContent")
             const pBtn = document.getElementById("mapP")
             const mBtn = document.getElementById("mapM")
@@ -335,12 +335,12 @@
 
             const map = new Image();
             map.src = "/public/img/plan/listMap.png"
-            map.addEventListener('load', ()=>{
+            map.onload = ()=>{
                 ctx.drawImage(map, 0, 0);
                 currentC.src = canvas.toDataURL();
 
 
-            });
+            };
             function clearC(){
                 ctx.clearRect(0,0,300,500)
             }
@@ -407,7 +407,7 @@
                 }
 
             });
-        })
+
 
 
 
